@@ -2,12 +2,10 @@
 #include "images.h"
 #include "globals.h"
 
-Sprites sprites;
-
 void drawopponent()
 {
 	uint8_t frame = (opp.stance == OppStance::oppStanding) ? 0 : ((opp.stance * 2) - 1 + opp.animationFrame);
-	sprites.drawOverwrite(opp.x, opp.y, opponentImages, frame);
+	Sprites::drawOverwrite(opp.x, opp.y, opponentImages, frame);
 }
 
 
